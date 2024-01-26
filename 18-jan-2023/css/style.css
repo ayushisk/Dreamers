@@ -1,7 +1,7 @@
 :root{
     --bg-color: #172937;
     --bg-upper: #253644;
-    --orange: orange;
+    --underline-heading: orange;
     --main-color: rgb(107, 70, 70);
 
 }
@@ -13,67 +13,23 @@
 }
 
 body {
-    margin-top: 40px; /* This margin just makes the text easier to read. You can remove it if you want since it can mess with your other styles. */
+    margin-top: 40px; 
     background-color: var(--bg-color);
 }
 
-body::before {
-  content: "";
-  color: red;
-  font-size: 2rem;
-  font-weight: bold;
-  position: fixed;
-  top: 0;
-  right: 0;
-}
-
-/* This box class is purely used for explaining how the bootstrap grid system works. */
-.box {
-  background-color: lightblue;
-  border: 1px solid blue;
-  min-height: 50px;
-  font-size: 2rem;
-}
-
-
-@media (max-width: 575px) {
-    body::before {
-      content: "XS";
-    }
+@media (max-width: 992px) {
+  
+  p{
+    font-size: 12px;
   }
-
-@media (min-width: 576px) {
-  body::before {
-    content: "SM";
+  h2, h3, h6{
+    font-size: small;
   }
 }
 
-@media (min-width: 768px) {
-  body::before {
-    content: "MD";
-  }
-}
 
-@media (min-width: 992px) {
-  body::before {
-    content: "LG";
-  }
-}
-
-@media (min-width: 1200px) {
-  body::before {
-    content: "XL";
-  }
-}
-
-@media (min-width: 1400px) {
-  body::before {
-    content: "XXL";
-  }
-}
-
-@media (max-width: 991px){
-    .info-more{
+@media (max-width: 320px){
+    .container{
         display: none;
     }
 }
